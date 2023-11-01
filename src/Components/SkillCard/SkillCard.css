@@ -1,0 +1,231 @@
+.skills h1{
+    color: #f3f3f3;
+    cursor: default;
+    font-size: 35px;
+    margin: 70px 0;
+}
+
+.skills h2 {
+    color: #f3f3f3;
+    cursor: default;
+    text-align: center;
+}
+
+
+.skills p{
+    color: #f3f3f3;
+    cursor: default;
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-right: 10px;
+}
+
+.skills img {
+    height: 110px;
+  }
+  
+  .skills img:hover {
+    animation: Home_jello-horizontal__12QDH .9s ease-in-out .3s both;
+  }
+
+  .skill-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .rating-bubbles {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .bubble {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ccc;
+    transition: background-color 0.3s;
+    cursor: default;
+    background-color: #f3f3f3;
+    border: 1px solid #f3f3f3;
+  }
+
+  .bubble.active {
+    background-color: #3f54f7;
+    border: 1px solid #f3f3f3;
+  }
+  
+  
+  @keyframes Home_jello-horizontal__12QDH {
+    0% {
+      transform: scale(1, 1);
+    }
+    30% {
+      transform: scale(1.25, 0.75);
+    }
+    50% {
+      transform: scale(0.75, 1.25);
+    }
+    65% {
+      transform: scale(1.15, 0.85);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+  
+.skill-card{
+    width: 60%;
+    height: 50%;
+  background: rgba(255, 255, 255, 0.11);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5.6px);
+  -webkit-backdrop-filter: blur(5.6px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    transition: height 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.expanded.skill-card {
+    height: 100%; /* Hauteur agrandie */
+  }
+
+.img-container{
+    display: flex;
+    justify-content: center;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  .fade-in.fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+.skill-card img{
+    transition: transform 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+.skill-card img:hover{
+    transform: scale(1.2);
+}
+
+.card-content {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  
+  .card-content.show {
+    opacity: 1;
+    max-height: 1000px; /* Valeur suffisamment grande pour afficher tout le texte */
+    overflow: visible;
+    animation: fadeIn 0.3s ease-in-out forwards; /* Ajout de l'animation fadeIn */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .expanded .card-content {
+    opacity: 1;
+    max-height: 1000px; /* Valeur suffisamment grande pour afficher tout le texte */
+    overflow: visible;
+  }
+
+  @media (min-width: 320px) and (max-width: 767px) {
+
+    .skills img{
+        height: 100px;
+        padding-top: 5px;
+    }
+
+
+    .skills h1{
+        font-size: 31px;
+    }
+
+    .skill-card {
+        width: 75%;
+    height: 20vh;
+    }
+    
+    .skills h2 {
+        font-size: 18px;
+    }
+
+    .skills p {
+        font-size: 16px;
+    }
+
+    .expanded.skill-card {
+    height: 100%; /* Hauteur agrandie */
+  }
+
+
+  }
+
+@media (min-width: 768px) and (max-width: 1280px) {
+
+ 
+     .skills h1{
+         font-size: 31px;
+     }
+ 
+     .skills img{
+         height: 100px;
+         padding-top: 0;
+     }
+
+
+     .skill-card{
+      width: 40%;
+  }
+
+
+     
+}
+
+@media screen and (min-width: 2560px) {
+
+    .skills h1{
+        margin-top: 130px;
+        font-size: 40px;
+    }
+
+    .skill-card {
+        width: 24%;
+        height: 49%;
+    }
+
+    .skills img {
+        height: 200px;
+    }
+
+    .skills h2 {
+        font-size: 35px;
+    }
+
+    .skills p {
+        font-size: 30px;
+    }
+
+}

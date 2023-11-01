@@ -1,0 +1,123 @@
+.skills {
+    height: 100vh;
+    font-family: 'Cabinet Grotesk', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+.container-skill{
+    display: flex;
+    flex-direction: row;
+    width: 86%;
+    height: 100%;
+    gap: 60px;
+    justify-content:space-between;
+    align-items: center;
+    margin-bottom: 110px;
+}
+
+.button-mind {
+    border-radius: 30px;
+    z-index: 1;
+    border: none;
+    width: 8%;
+    height: 80px;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: 'Cabinet Grotesk', sans-serif;
+    margin-top: 30px;
+    transition: 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    position: relative;
+    top: -62px;
+    color: #000;
+    font-size: 16px;
+    overflow: hidden;
+  }
+  
+  .button-mind::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #3f54f7 0%, #3f54f7 0%);
+    transition: left 0.3s ease-in-out;
+    z-index: -1;
+  }
+  
+  .button-mind:hover::before {
+    left: 0;
+  }
+  
+  .button-mind:hover {
+    color: #f3f3f3;
+    border: none;
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.4);
+  }
+  
+
+
+@media (min-width: 320px) and (max-width: 767px) {
+
+    .skills{
+       height: auto;
+       padding-top: 40px;
+    }
+
+    .container-skill{
+        display: flex;
+        flex-direction:column;
+        width: 80%;
+        height: 50%;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
+    
+    .fade-in-visible {
+      opacity: 1;
+    }
+
+    .skills h1{
+        font-size: 31px;
+    }
+
+    .button-mind{
+        width: 27%;
+        height: 60px;
+        margin-top: 80px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+
+    .skills{
+      height: 180vh;
+        padding-top: 40px;
+     }
+     
+     .container-skill{
+         display: flex;
+         flex-direction:column;
+         width: 80%;
+         height: 100%;
+         gap: 100px;
+         align-items: center;
+         margin-top: 0;
+     }
+
+     .button-mind{
+      width: 15%;
+      height: 60px;
+      margin-top: 30px;
+  }
+}
